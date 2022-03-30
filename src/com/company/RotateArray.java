@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class RotateArray {
 
     private int[][] arr = new int[10][10];
@@ -19,12 +21,48 @@ public class RotateArray {
      }
 
      public void printArray() {
-         for(int[] outerArr : arr) {
-             for(int num : outerArr ) {
-                 System.out.print(num + ", " );
+
+         for (int i = 0; i < arr.length; i++) {
+             for (int j = 0; j < arr[i].length; j++) {
+                 System.out.print(arr[i][j] + ", ");
              }
              System.out.println();
          }
 
+         }
+
+     public void switchRowsColumnsWithCopy() {
+
+         System.out.println("In switch rows columns ");
+         System.out.println("+++++++++++++++++++++++++++++++++");
+
+         int[][] copy;
+         copy = arr;
+
+         for(int i = 0; i < arr.length; i ++) {
+             for (int j = 0; j < arr[i].length; j++) {
+                 System.out.print(copy[j][i] + ", ");
+             }
+             System.out.println();
+         }
      }
+    public void switchRowsColumnsReverseRowWithCopy() {
+
+        System.out.println("In switch rows columns reverse Row ");
+        System.out.println("+++++++++++++++++++++++++++++++++");
+
+        int[][] copy;
+        copy = arr;
+
+        for(int i = 0; i < arr.length; i ++) {
+            for (int j = arr[i].length - 1; j >= 0; j--) {
+                System.out.print(copy[j][i] + ", ");
+            }
+            System.out.println();
+        }
+    }
+
+
+
+
 }
